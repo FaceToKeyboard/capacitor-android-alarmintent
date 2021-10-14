@@ -19,4 +19,41 @@ public class AndroidAlarmIntentPlugin extends Plugin {
         ret.put("value", implementation.echo(value));
         call.resolve(ret);
     }
+
+    @PluginMethod
+    public void createAlarm(PluginCall call) {
+        Integer hour = call.getInt("hour");
+        Integer minute = call.getInt("minute");
+        String message = call.getString("message");
+
+        Boolean success = implementation.createAlarm(hour, minute, message, getContext());
+
+        if (success) {
+            JSObject ret = new JSObject();
+            ret.put("success", true);
+            call.resolve(ret);
+        } else {
+            JSObject ret = new JSObject();
+            ret.put("success", false);
+            call.reject(ret.toString());
+        }
+    }
+
+    @PluginMethod
+    public void createTimer(PluginCall call) {
+        Integer duration = call.getInt("duration");
+        String message = call.getString("message");
+
+        Boolean success = implementation.createTimer(duration, message, getContext());
+
+        if (success) {
+            JSObject ret = new JSObject();
+            ret.put("success", true);
+            call.resolve(ret);
+        } else {
+            JSObject ret = new JSObject();
+            ret.put("success", false);
+            call.reject(ret.toString());
+        }
+    }
 }

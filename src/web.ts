@@ -7,4 +7,13 @@ export class AndroidAlarmIntentWeb extends WebPlugin implements AndroidAlarmInte
     console.log('ECHO', options);
     return options;
   }
+
+  async createAlarm(options: {hour: number, minute: number, message: string}): Promise<void> {
+    throw this.unimplemented('Not implemented on web.');
+  }
+
+  async createTimer(options: {duration: number, message: string}): Promise<void> {
+    throw this.unimplemented('Not implemented on web.');
+  }
+
 }

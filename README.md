@@ -1,6 +1,6 @@
 # @facetokeyboard/android-alarmclock
 
-Create and send AlarmClock intents
+A 'Capacitor' for the [Ionic framework](https://ionicframework.com/) to create and send AlarmClock intents for Android.
 
 ## Install
 

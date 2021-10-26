@@ -1,6 +1,7 @@
 # @facetokeyboard/android-alarmclock
 
 A 'Capacitor' for the [Ionic framework](https://ionicframework.com/) to create and send AlarmClock intents for Android.
+Created for my [monologue-client-android](https://github.com/FaceToKeyboard/monologue-client-android)
 
 ## Install
 
